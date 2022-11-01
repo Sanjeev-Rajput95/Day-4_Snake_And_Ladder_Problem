@@ -57,27 +57,45 @@ namespace SnakeAndLadder
                                 playerPosition1 = playerPosition1 - stepCheck;
                                 Console.WriteLine(" Backward move ");
                             }
+                            activePlayer = 2;
                         }
                         else
                         {
-                            if (playerPosition1 > 0)
+                            if (playerPosition2 > 0)
                             {
-                                playerPosition1 = playerPosition1 - stepCheck;
+                                playerPosition2 = playerPosition2 - stepCheck;
                                 Console.WriteLine(" Backward move ");
                             }
-
+                            activePlayer = 1;
                         }
-                       
                         break;
                     case NO_MOVE:
+                        if (activePlayer == 1)
+                        {
+                            activePlayer = 2;
+                        }
+                        else
+                        {
+                            activePlayer = 1;
+                        }
                         Console.WriteLine("No move ");
                         break;
                 }
-                Console.WriteLine(playerPosition1 + " step count ");
-                Console.WriteLine(playerPosition2 + " step count ");
-
                 Console.WriteLine("Number of Dice roll = " + count);
-            }           
+            }
+            Console.WriteLine( playerPosition1 + " step count of player1 ");
+            Console.WriteLine( playerPosition2 + " step count of player2 ");
+
+            if (playerPosition1 == 100 )
+            {
+                Console.WriteLine("Player 1 is WIN : " + playerPosition1 );
+            }
+            else
+            {
+                Console.WriteLine("Player 2 is WIN : " + playerPosition2 );
+            }
+            Console.WriteLine("Number of Dice roll = " + count);
+
         }
     }
 }
