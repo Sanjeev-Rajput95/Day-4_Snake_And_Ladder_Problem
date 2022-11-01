@@ -9,6 +9,8 @@
             Day4Problem day4ProblemObj = new Day4Problem();
 
             day4ProblemObj.singlePlayer();
+
+            day4ProblemObj.firstDiceRoll();
         }
     }
 }
