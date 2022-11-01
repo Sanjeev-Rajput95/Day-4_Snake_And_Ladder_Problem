@@ -16,11 +16,13 @@ namespace SnakeAndLadder
         public void winningPosition()
         {
             int position = 0;
+            int count = 0;
 
             Random random = new Random();  
 
             while(position < 100)
             {
+                count = count + 1;
                 int movingCheck = random.Next(1, 3);
                 int stepCheck = random.Next(1, 6);
                 Console.WriteLine(" this is moving check " + movingCheck);
@@ -46,6 +48,7 @@ namespace SnakeAndLadder
                         break;
                 }
                 Console.WriteLine(position + " step count ");
+                Console.WriteLine("Number of Dice roll = " + count);
             }           
         }
     }
