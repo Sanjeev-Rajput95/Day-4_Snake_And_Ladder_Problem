@@ -25,8 +25,8 @@ namespace SnakeAndLadder
             while(playerPosition1 < 100 && playerPosition2 <100)
             {
                 count = count + 1;
-                int movingCheck = random.Next(1, 3);
-                int stepCheck = random.Next(1, 6);
+                int movingCheck = random.Next(1, 4);
+                int stepCheck = random.Next(1, 7);
                 Console.WriteLine(" this is moving check " + movingCheck);
                 Console.WriteLine(" this is step check " + stepCheck);
                 switch (movingCheck)
